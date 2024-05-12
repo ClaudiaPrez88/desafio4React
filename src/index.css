@@ -2,4 +2,5 @@ img.card-img-top {
     height: 200px;
     width: auto;
     object-fit: contain;
+    padding: 20px;
 }

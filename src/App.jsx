@@ -1,13 +1,13 @@
-// App.jsx
 import { MiApi } from './components/MiApi';
 import './App.css';
 import { Buscador } from './components/Buscador';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Nav from './components/Navbar';
+import Slide from './components/Slide';
+import { Footer } from './components/Footer';
 
 function App() {
   const [productos, setProductos] = useState([]);
@@ -47,14 +47,20 @@ function App() {
   }, [search, productos]);
 
   return (
-    <Container>
-      <Row>
-        <Col>
+      <>
+        <Container fluid>
+          <Nav/>
+          <Slide/>
+        </Container>
+        <Container>
           <Buscador handleSearch={handleSearch} handleSort={handleSort} />
           <MiApi productos={filtroProducto.length > 0 ? filtroProducto : productos} orden={orden} />
-        </Col>
-      </Row>
-    </Container>
+        </Container>
+        <Container fluid>
+            <Footer/>
+        </Container>
+      </>
+   
   );
 }
 

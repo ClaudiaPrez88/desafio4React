@@ -1,0 +1,65 @@
+.container-fluid {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+#slide {
+    margin-bottom: 50px;
+    background: #F1F1F1;
+}
+nav.bg-body-tertiary.navbar.navbar-expand.navbar-light {
+    background: #F1F1F1 !important;
+    border-bottom: solid 1px #d5d5d5;
+}
+.card-title.h5 {
+    font-size: 14px;
+}
+img.d-block.w-100 {
+    width: 300px !important;
+    padding-top: 20px;
+}
+.carousel-caption h5 {
+    color: #fa593f;
+}
+#slide p {
+    font-size: 72px;
+}
+.carousel-caption{
+    width: 45%;
+    margin: 0 auto 0 auto;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+#buscador{
+    margin-bottom: 50px;
+}
+#footer{
+    background-color: black;
+    padding: 50px;
+}
+.logo-footer{
+    width: 200px;
+    height: auto;
+}
+
+.col-footer{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+}
+svg.icon {
+    margin-right: 20px;
+     font-size: 25px; 
+}
+/* Estilos para pantallas 767px */
+@media only screen and (max-width: 767px) {
+    #slide p {
+        font-size: 22px;
+    }
+    .card {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+  }

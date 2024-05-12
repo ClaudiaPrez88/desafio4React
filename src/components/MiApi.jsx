@@ -1,7 +1,8 @@
-// MiApi.jsx
 import { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import { Row } from "react-bootstrap";
 
 export const MiApi = ({ productos, orden }) => {
   const [productosMostrados, setProductosMostrados] = useState([]);
@@ -17,15 +18,15 @@ export const MiApi = ({ productos, orden }) => {
 	// Actualizamos el estado con los productos ordenados
 	setProductosMostrados(productosOrdenados);
   }, [productos, orden]);
-  console.log(productos)
 
   return (
-    <div>
-      <h1>Productos</h1>
-      <div className="row">
-        {productosMostrados.length ? (
-          productosMostrados.map((producto, key) => (
-            <div key={key} className="col">
+    <>
+     <Row>
+      
+      {productosMostrados.length ? (
+          productosMostrados.map((producto, index) => (
+            <Col key={index}  md={4} lg={4} xl={3}>
+            <div className="col">
               <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={producto.image} />
                 <Card.Body>
@@ -36,11 +37,14 @@ export const MiApi = ({ productos, orden }) => {
                 </Card.Body>
               </Card>
             </div>
+            </Col>
           ))
         ) : (
-          <h1>No se encontraron productos</h1>
+          <Col>
+            <h1>No se encontraron productos</h1>
+          </Col>
         )}
-      </div>
-    </div>
+     </Row>
+    </>
   );
 };
