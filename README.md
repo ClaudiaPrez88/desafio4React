@@ -2,4 +2,4 @@
 
 Consumo de Api con React
 
-![Tienda](public/screenshot.png)
+![Tienda](public/screen.png)
