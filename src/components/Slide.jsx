@@ -12,7 +12,7 @@ function Slide() {
         />
         <Carousel.Caption>
           <h5>SALE UP TO 70% OFF</h5>
-          <p>FALL - WINTER COLLECTIONS 2020</p>
+          <p>FALL - WINTER COLLECTIONS 2024</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
